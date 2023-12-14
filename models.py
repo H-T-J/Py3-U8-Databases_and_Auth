@@ -12,6 +12,4 @@ class Tasks(Base):
     description = Column(String)
     priority = Column(Integer)
     complete = Column(Boolean, default=False)
-    created_on = Column(DateTime, default=datetime.utcnow())
-    def __init__(self):
-        super().__init__()
+    created_on = Column(DateTime, default=datetime.utcnow)
