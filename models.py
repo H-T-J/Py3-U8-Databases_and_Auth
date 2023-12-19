@@ -14,6 +14,7 @@ class Users(Base):
     is_active = Column(Boolean, default=True)
     joined_on = Column(DateTime, default=datetime.utcnow)
 
+
 class Tasks(Base):
     __tablename__ = "tasks"
 
