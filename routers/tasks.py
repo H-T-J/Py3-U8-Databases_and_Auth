@@ -13,7 +13,7 @@ router = APIRouter()
 
 class Task(BaseModel):
     id: int | None = None
-    title: str = Field(min_length=3)
+    title: str = Field(min_length=3, max_length=23)
     description: str = Field(min_length=3, max_length=250)
     priority: int = Field(gt=0, lt=6)
     complete: bool = Field(default=False)
